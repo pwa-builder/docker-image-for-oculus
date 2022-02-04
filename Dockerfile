@@ -32,7 +32,8 @@ RUN  apt-get update  -y \
     && apt-get install -y software-properties-common \
     && add-apt-repository ppa:openjdk-r/ppa \
     && apt-get install -y openjdk-8-jdk \
-    && apt-get install -y curl    
+    && apt-get install -y curl \
+    && apt-get install unzip
 
 
 
