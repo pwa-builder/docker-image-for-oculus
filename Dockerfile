@@ -18,7 +18,7 @@ ENV \
     NUGET_XMLDOC_MODE=skip \
     # PowerShell telemetry for docker image usage
     POWERSHELL_DISTRIBUTION_CHANNEL=PSDocker-DotnetSDK-Ubuntu-20.04 \
-    JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+    JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 
 # RUN apt-get update \
 #     && apt-get install -y --no-install-recommends \
@@ -35,11 +35,6 @@ RUN  apt-get update  -y \
     && apt-get install -y curl \
     && apt-get install unzip
 
-
-
-
-# java
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 # Install .NET SDK
 RUN curl -fSL --output dotnet.tar.gz https://dotnetcli.azureedge.net/dotnet/Sdk/$DOTNET_SDK_VERSION/dotnet-sdk-$DOTNET_SDK_VERSION-linux-x64.tar.gz \
